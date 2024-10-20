@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date Invitation</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Addington+Decorated&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -191,23 +191,23 @@
 
       .text-box {
         background-color: white;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px auto;
-            width: 90%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            font-size: 24px; /* Tăng kích thước chữ */
-            text-align: left;
-            position: relative;
-            top: 1cm; /* Move down 1 cm */
-            font-family: 'Dancing Script', cursive; /* Font 
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px auto;
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 24px;
+        text-align: left;
+        position: relative;
+        top: 1cm;
+        font-family: 'Dancing Script', cursive;
       }
 
       .signature {
         text-align: right;
-        font-family: "Addington Decorated", cursive; /* Signature font */
-        font-size: 16px; /* Adjust font size if needed */
-        margin-top: 20px; /* Space above signature */
+        font-family: 'Dancing Script', cursive;
+        font-size: 16px;
+        margin-top: 20px;
       }
 
       .intro {
@@ -301,22 +301,22 @@
       function renderImages() {
         container.innerHTML = `
           <div class="images">
-        <div class="message" id="message">
-          <p>Đầu tiên là hoa nèeeeeee</p>
-        </div>
+            <div class="message" id="message">
+              <p>Đầu tiên là hoa nèeeeeee</p>
+            </div>
 
-        <div class="image-container" id="image-container">
-          <img
-            id="main-image"
-            src="https://scontent.fhan14-3.fna.fbcdn.net/v/t1.15752-9/462543661_897964158589798_5590956200469517724_n.png?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=_4IO_Gjt1hYQ7kNvgFrP6YJ&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AByyybxuxstuvdb2AmCYeLH&oh=03_Q7cD1QF-j_Jh8W4Fk7_wBTPTnMSBceTdXxNzzPoH5uRZI73N_Q&oe=673BDF51"
-            alt="Flowers"
-          />
-        </div>
+            <div class="image-container" id="image-container">
+              <img
+                id="main-image"
+                src="https://scontent.fhan14-3.fna.fbcdn.net/v/t1.15752-9/462543661_897964158589798_5590956200469517724_n.png?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=_4IO_Gjt1hYQ7kNvgFrP6YJ&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AByyybxuxstuvdb2AmCYeLH&oh=03_Q7cD1QF-j_Jh8W4Fk7_wBTPTnMSBceTdXxNzzPoH5uRZI73N_Q&oe=673BDF51"
+                alt="Flowers"
+              />
+            </div>
 
-        <button class="button image-button" id="image-button">
-          <span class="text">Tiếp theo sẽ là một tấm thiệp</span>
-        </button>
-      </div>
+            <button class="button image-button" id="image-button">
+              <span class="text">Tiếp theo sẽ là một tấm thiệp</span>
+            </button>
+          </div>
         `;
 
         const imageButton = document.querySelector(".image-button");
@@ -333,8 +333,8 @@
           .addEventListener("click", function () {
             document.body.style.backgroundColor = "#ffd1d6";
             document.getElementById("invitation-text").style.opacity = "0";
-            document.getElementById("chat-box").style.display = "none"; // Remove chat box
-            document.getElementById("image-container").style.display = "none"; // Remove image
+            document.getElementById("chat-box").style.display = "none";
+            document.getElementById("image-container").style.display = "none";
             document.querySelector(".buttons").style.display = "none";
             const card = document.getElementById("card");
             card.style.display = "block";
@@ -384,52 +384,57 @@
 
         container.innerHTML = `
          <div class="image-container" id="image-container">
-        <img
-          id="main-image"
-          src="https://i.imgur.com/ZN4wsuE.png"
-          alt="Image"
-        />
-      </div>
-
-      <div class="chat-box" id="chat-box">
-        <div class="quote" id="quote">Đừng màa :<</div>
-      </div>
-
-      <h1 id="invitation-text">Em có muốn mở nó ra không?</h1>
-
-      <div class="buttons">
-        <button class="button yes-button" id="yes-button">
-          <span class="text">Dạaa</span>
-        </button>
-        <button class="button no-button" id="no-button">
-          <span class="text">Đéo</span>
-        </button>
-      </div>
-
-      <div class="card" id="card">
-        <div class="corner-text">FOR MY BAE</div>
-        <div class="text-box">
-          Anh không biết em có vui không khi nhận lấy nó nhưng anh cũng muốn em
-          được là một con người đặc biệt trong ngày hôm nay. Em xứng đáng với
-          tất cả những gì quý giá nhất, không thua kém bất kì ai... có thể thứ
-          này nó không đáng giá, anh không mang lại cho em được những giá trị
-          vật chất gì cả vì đến chính anh còn đang sống phụ thuộc vào bố mẹ nên
-          mong em có thể tha thứ cho anh. Năm nay có thể không được, nhưng anh
-          sẽ cố gắng cho năm sau, năm sau nữa, mong là tụi mình vẫn còn ở bên
-          nhau đến khi đó nhỉ :v Mong mọi điều tốt đẹp nhất sẽ đến với em, học
-          tập cho tốt và đỗ trường mình mong muốn nhé!
-          <div class="signature">
-            Best wishes,<br />
-            your sincerely!
+            <img
+              id="main-image"
+              src="https://i.imgur.com/ZN4wsuE.png"
+              alt="Image"
+            />
           </div>
-        </div>
-        <div class="flowers">🌸 🌼 🌺 🌷 🌻</div>
-        <button class="click-me" id="push-me">PUSH ME</button>
-      </div>
+
+          <div class="chat-box" id="chat-box">
+            <div class="quote" id="quote">Đừng màa :<</div>
+          </div>
+
+          <h1 id="invitation-text">Em có muốn mở nó ra không?</h1>
+
+          <div class="buttons">
+            <button class="button yes-button" id="yes-button">
+              <span class="text">Dạaa</span>
+            </button>
+            <button class="button no-button" id="no-button">
+              <span class="text">Đéo</span>
+            </button>
+          </div>
+
+          <div class="card" id="card">
+            <div class="corner-text">FOR MY BAE</div>
+            <div class="text-box">
+              Anh không biết em có vui không khi nhận lấy nó nhưng anh cũng muốn em
+              được là một con người đặc biệt trong ngày hôm nay. Em xứng đáng với
+              tất cả những gì quý giá nhất, không thua kém bất kì ai... có thể thứ
+              này nó không đáng giá, anh không mang lại cho em được những giá trị
+              vật chất gì cả vì đến chính anh còn đang sống phụ thuộc vào bố mẹ nên
+              mong em có thể tha thứ cho anh. Năm nay có thể không được, nhưng anh
+              sẽ cố gắng cho năm sau, năm sau nữa, mong là tụi mình vẫn còn ở bên
+              nhau đến khi đó nhỉ :v Mong mọi điều tốt đẹp nhất sẽ đến với em, học
+              tập cho tốt và đỗ trường mình mong muốn nhé!
+              <div class="signature">
+                Best wishes,<br />
+                your sincerely!
+              </div>
+            </div>
+            <div class="flowers">🌸 🌼 🌺 🌷 🌻</div>
+            <button class="click-me" id="push-me">PUSH ME</button>
+          </div>
         `;
 
         onClickYesButton();
         onClickNoButton();
+
+        // Thêm sự kiện cho nút "PUSH ME"
+        document.getElementById("push-me").onclick = () => {
+            window.location.href = "https://www.instagram.com/direct/t/25538100515834141/";
+        };
       }
     </script>
   </body>
